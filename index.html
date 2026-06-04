@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ngân Lê | eLearning Specialist</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:wght@600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; }
+    .heading-font { font-family: 'Fraunces', serif; }
+    section[id] { scroll-margin-top: 100px; }
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .timeline-line { position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: #0f766e; transform: translateX(-50%); }
+    @media (max-width: 768px) { .timeline-line { left: 20px; } }
+    .project-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .project-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+    .modal-overlay { transition: opacity 0.3s ease; }
+    .modal-content { transition: transform 0.3s ease, opacity 0.3s ease; }
+    .modal-overlay.hidden { opacity: 0; pointer-events: none; }
+    .modal-overlay.hidden .modal-content { transform: scale(0.95); opacity: 0; }
+  </style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/resizing_sdk.js" type="text/javascript"></script>
+ <script src="/_sdk/telemetry_sdk.js"></script></head>
+ <body data-template-id="__page-root" class="min-h-screen" style="background: rgb(248, 250, 251);">
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+   <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <span data-template-id="nav-brand" class="canva-text heading-font text-lg font-semibold" style="color: rgb(15, 118, 110); font-weight: 700; font-style: normal; font-size: 16px;">Ngân Lê</span>
+    <div class="hidden md:flex gap-6 text-sm">
+     <a href="#about" class="hover:text-teal-700 transition-colors">About</a> <a href="#skills" class="hover:text-teal-700 transition-colors">Skills</a> <a href="#projects" class="hover:text-teal-700 transition-colors">Projects</a> <a href="#experience" class="hover:text-teal-700 transition-colors">Experience</a> <a href="#contact" class="hover:text-teal-700 transition-colors">Contact</a>
+    </div>
+   </div>
+  </nav><!-- Hero -->
+  <header class="pt-24 pb-16 md:pt-32 md:pb-24">
+   <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+    <div class="flex-1 order-2 md:order-1">
+     <h1 data-template-id="hero-name" class="canva-text heading-font" style="color: rgb(17, 24, 39); font-weight: 700; font-style: normal; font-size: 48px;">Ngân Lê</h1>
+     <p data-template-id="hero-title" class="canva-text mt-3" style="color: rgb(15, 118, 110); font-weight: 500; font-style: normal; font-size: 18px;">eLearning Specialist | Instructional Designer | Digital Learning Professional</p>
+     <p data-template-id="hero-intro" class="canva-text mt-5 max-w-lg leading-relaxed" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 17px;">Digital Learning &amp; LMS Operations Specialist with 3+ years of experience designing, developing, deploying, and managing digital learning solutions for diverse corporate audiences. 
+
+Strong instructional design expertise in translating business requirements into engaging learner experiences and cascading learning programs effectively to learners across organizations.</p>
+     <div class="flex flex-wrap gap-4 mt-8">
+      <a href="#projects" data-template-id="cta-portfolio" class="canva-button px-6 py-3 rounded-lg font-medium transition-transform hover:scale-105" style="background: rgb(15, 118, 110); color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">View My Projects</a> <a href="#contact" data-template-id="cta-contact" class="canva-button px-6 py-3 rounded-lg font-medium border-2 transition-transform hover:scale-105" style="background: transparent; color: rgb(15, 118, 110); font-weight: 600; font-style: normal; font-size: 16px;">Contact Me</a>
+     </div>
+    </div>
+    <div class="flex-shrink-0 order-1 md:order-2">
+     <div class="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden ring-4 ring-teal-100 shadow-xl">
+      <img data-template-id="hero-photo" class="canva-image w-full h-full object-cover" loading="lazy" src="ava.png" alt="Professional woman working on laptop with indoor plants in background">
+     </div>
+    </div>
+   </div>
+  </header>
+  <main>
+   <!-- About -->
+   <section id="about" data-template-id="about-section" class="canva-section py-16 md:py-24 fade-in" style="background: rgb(255, 255, 255);">
+    <div class="max-w-4xl mx-auto px-6">
+     <h2 data-template-id="about-heading" class="canva-text heading-font text-center mb-8" style="color: rgb(17, 24, 39); font-weight: 700; font-style: normal; font-size: 24px;">About Me</h2>
+     <div class="space-y-4">
+      <p data-template-id="about-p1" class="canva-text leading-relaxed" style="color: rgb(55, 65, 81); font-weight: 400; font-style: normal; font-size: 16px;">I have spent 3+ years working at the intersection of education and technology.</p>
+      <p data-template-id="about-p2" class="canva-text leading-relaxed" style="color: rgb(55, 65, 81); font-weight: 400; font-style: normal; font-size: 16px;">My experience spans eLearning design, content development, multimedia production, and LMS administration across diverse industries and international projects.</p>
+      <p data-template-id="about-p3" class="canva-text leading-relaxed" style="color: rgb(55, 65, 81); font-weight: 400; font-style: normal; font-size: 16px;">I'm passionate about creating learner-centered digital experiences that are engaging, accessible, and aligned with real-world performance outcomes.</p>
+     </div>
+    </div>
+   </section><!-- Skills -->
+   <section id="skills" class="py-16 md:py-24 fade-in" data-template-id="skills-section">
+    <div class="max-w-6xl mx-auto px-6">
+     <h2 data-template-id="skills-heading" class="canva-text heading-font text-center mb-12" style="color: rgb(17, 24, 39); font-weight: 700; font-style: normal; font-size: 24px;">Core Skills</h2>
+     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div data-template-id="skill-1" class="canva-card p-5 rounded-xl text-center" style="background: rgb(236, 253, 245);">
+       <p data-template-id="skill-1-text" class="canva-text font-medium" style="color: rgb(6, 95, 70); font-weight: 400; font-style: normal; font-size: 16px;">Adaptability</p>
+      </div>
+      <div data-template-id="skill-2" class="canva-card p-5 rounded-xl text-center" style="background: rgb(236, 253, 245);">
+       <p data-template-id="skill-2-text" class="canva-text font-medium" style="color: rgb(6, 95, 70); font-weight: 400; font-style: normal; font-size: 16px;">Storyboarding</p>
+      </div>
+      <div data-template-id="skill-3" class="canva-card p-5 rounded-xl text-center" style="background: rgb(236, 253, 245);">
+       <p data-template-id="skill-3-text" class="canva-text font-medium" style="color: rgb(6, 95, 70); font-weight: 400; font-style: normal; font-size: 16px;">eLearning Development</p>
+      </div>
+      <div data-template-id="skill-4" class="canva-card p-5 rounded-xl text-center" style="background: rgb(236, 253, 245);">
+       <p data-template-id="skill-4-text" class="canva-text font-medium" style="color: rgb(6, 95, 70); font-weight: 400; font-style: normal; font-size: 16px;">LMS Administration</p>
+      </div>
+      <div data-template-id="skill-5" class="canva-card p-5 rounded-xl text-center" style="background: rgb(236, 253, 245);">
+       <p data-template-id="skill-5-text" class="canva-text font-medium" style="color: rgb(6, 95, 70); font-weight: 400; font-style: normal; font-size: 16px;">Learning Experience Design</p>
+      </div>
+      <div data-template-id="skill-6" class="canva-card p-5 rounded-xl text-center" style="background: rgb(236, 253, 245);">
+       <p data-template-id="skill-6-text" class="canva-text font-medium" style="color: rgb(6, 95, 70); font-weight: 400; font-style: normal; font-size: 16px;">Video Shooting, Editing &amp; Animation</p>
+      </div>
+      <div data-template-id="skill-7" class="canva-card p-5 rounded-xl text-center" style="background: rgb(236, 253, 245);">
+       <p data-template-id="skill-7-text" class="canva-text font-medium" style="color: rgb(6, 95, 70); font-weight: 400; font-style: normal; font-size: 16px;">Problem Solving</p>
+      </div>
+      <div data-template-id="skill-8" class="canva-card p-5 rounded-xl text-center" style="background: rgb(236, 253, 245);">
+       <p data-template-id="skill-8-text" class="canva-text font-medium" style="color: rgb(6, 95, 70); font-weight: 400; font-style: normal; font-size: 16px;">Project Coordination</p>
+      </div>
+      <div data-template-id="skill-9" class="canva-card p-5 rounded-xl text-center" style="background: rgb(236, 253, 245);">
+       <p data-template-id="skill-9-text" class="canva-text font-medium" style="color: rgb(6, 95, 70); font-weight: 400; font-style: normal; font-size: 16px;">Stakeholder Management</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Tools -->
+   <section data-template-id="tools-section" class="canva-section py-16 md:py-24 fade-in" style="background: rgb(240, 253, 250);">
+    <div class="max-w-6xl mx-auto px-6">
+     <h2 data-template-id="tools-heading" class="canva-text heading-font text-center mb-12" style="color: rgb(17, 24, 39); font-weight: 700; font-style: normal; font-size: 24px;">Tools &amp; Technologies</h2>
+     <div class="flex flex-wrap justify-center gap-3">
+      <span data-template-id="tool-1" class="canva-tag px-4 py-2 rounded-full text-sm font-medium" style="background: rgb(204, 251, 241); color: rgb(19, 78, 74); font-weight: 400; font-style: normal; font-size: 16px;">Articulate Storyline 360</span> <span data-template-id="tool-2" class="canva-tag px-4 py-2 rounded-full text-sm font-medium" style="background: rgb(204, 251, 241); color: rgb(19, 78, 74); font-weight: 400; font-style: normal; font-size: 16px;">Rise 360</span> <span data-template-id="tool-3" class="canva-tag px-4 py-2 rounded-full text-sm font-medium" style="background: rgb(204, 251, 241); color: rgb(19, 78, 74); font-weight: 400; font-style: normal; font-size: 16px;">Adobe Captivate</span> <span data-template-id="tool-4" class="canva-tag px-4 py-2 rounded-full text-sm font-medium" style="background: rgb(204, 251, 241); color: rgb(19, 78, 74); font-weight: 400; font-style: normal; font-size: 16px;">Capcut</span> <span data-template-id="tool-5" class="canva-tag px-4 py-2 rounded-full text-sm font-medium" style="background: rgb(204, 251, 241); color: rgb(19, 78, 74); font-weight: 400; font-style: normal; font-size: 16px;">Vyond</span> <span data-template-id="tool-6" class="canva-tag px-4 py-2 rounded-full text-sm font-medium" style="background: rgb(204, 251, 241); color: rgb(19, 78, 74); font-weight: 400; font-style: normal; font-size: 16px;">Camtasia</span> <span data-template-id="tool-7" class="canva-tag px-4 py-2 rounded-full text-sm font-medium" style="background: rgb(204, 251, 241); color: rgb(19, 78, 74); font-weight: 400; font-style: normal; font-size: 16px;">Adobe After Effects</span> <span data-template-id="tool-8" class="canva-tag px-4 py-2 rounded-full text-sm font-medium" style="background: rgb(204, 251, 241); color: rgb(19, 78, 74); font-weight: 400; font-style: normal; font-size: 16px;">Adobe Illustrator</span> <span data-template-id="tool-9" class="canva-tag px-4 py-2 rounded-full text-sm font-medium" style="background: rgb(204, 251, 241); color: rgb(19, 78, 74); font-weight: 400; font-style: normal; font-size: 16px;">Canva</span> <span data-template-id="tool-10" class="canva-tag px-4 py-2 rounded-full text-sm font-medium" style="background: rgb(204, 251, 241); color: rgb(19, 78, 74); font-weight: 400; font-style: normal; font-size: 16px;">LMS Management</span> <span data-template-id="tool-11" class="canva-tag px-4 py-2 rounded-full text-sm font-medium" style="background: rgb(204, 251, 241); color: rgb(19, 78, 74); font-weight: 400; font-style: normal; font-size: 16px;">Microsoft Office</span>
+     </div>
+    </div>
+   </section><!-- Projects -->
+   <section id="projects" class="py-16 md:py-24 fade-in">
+    <div class="max-w-6xl mx-auto px-6">
+     <h2 data-template-id="projects-heading" class="canva-text heading-font text-center mb-12" style="color: rgb(17, 24, 39); font-weight: 700; font-style: normal; font-size: 24px;">Featured Projects</h2>
+     <div class="grid md:grid-cols-3 gap-8">
+      <div data-template-id="proj1-card" class="canva-card rounded-2xl overflow-hidden shadow-lg project-card cursor-pointer" onclick="openModal('highlands')" style="background: rgb(255, 255, 255);">
+       <img data-template-id="proj1-img" class="canva-image w-full h-48 object-cover" loading="lazy" src="Highlands Coffee thumbnail.png" alt="Highlands Coffee logo - red background with white coffee cup and text">
+       <div class="p-6">
+        <h3 data-template-id="proj1-title" class="canva-text font-semibold mb-3" style="color: rgb(17, 24, 39); font-weight: 400; font-style: normal; font-size: 18px;">Highlands Coffee eLearning Projects</h3>
+        <p data-template-id="proj1-desc" class="canva-text text-sm leading-relaxed mb-4" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Developed operational learning content, produced learning videos and interactive quizzes, managed course deployment through LMS.</p><span data-template-id="proj1-cta" class="canva-button inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-transform hover:scale-105" style="background: rgb(15, 118, 110); color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">View Case Study →</span>
+       </div>
+      </div>
+      <div data-template-id="proj2-card" class="canva-card rounded-2xl overflow-hidden shadow-lg project-card cursor-pointer" onclick="openModal('agris')" style="background: rgb(255, 255, 255);">
+       <img data-template-id="proj2-img" class="canva-image w-full h-48 object-cover" loading="lazy" src="TTC Agris thumbnail.png" alt="AgriS logo - green background with white text">
+       <div class="p-6">
+        <h3 data-template-id="proj2-title" class="canva-text font-semibold mb-3" style="color: rgb(17, 24, 39); font-weight: 400; font-style: normal; font-size: 18px;">TTC AgriS Sugarcane Harvester elearning Course</h3>
+        <p data-template-id="proj2-desc" class="canva-text text-sm leading-relaxed mb-4" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Converted technical manuals into interactive eLearning courses, developed instructional scripts, and coordinated video production and field recording.</p><span data-template-id="proj2-cta" class="canva-button inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-transform hover:scale-105" style="background: rgb(15, 118, 110); color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">View Case Study →</span>
+       </div>
+      </div>
+      <div data-template-id="proj3-card" class="canva-card rounded-2xl overflow-hidden shadow-lg project-card cursor-pointer" onclick="openModal('unicef')" style="background: rgb(255, 255, 255);">
+       <img data-template-id="proj3-img" class="canva-image w-full h-48 object-cover" loading="lazy" src="UNICEF thumbnail.png" alt="UNICEF logo - blue background with white unicef text and emblem">
+       <div class="p-6">
+        <h3 data-template-id="proj3-title" class="canva-text font-semibold mb-3" style="color: rgb(17, 24, 39); font-weight: 400; font-style: normal; font-size: 18px;">UNICEF Parenting Course</h3>
+        <p data-template-id="proj3-desc" class="canva-text text-sm leading-relaxed mb-4" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Designed and developed digital learning content, managed stakeholder feedback, and ensured alignment between learning objectives and course experience.</p><span data-template-id="proj3-cta" class="canva-button inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-transform hover:scale-105" style="background: rgb(15, 118, 110); color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">View Case Study →</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Experience -->
+   <section id="experience" data-template-id="exp-section" class="canva-section py-16 md:py-24 fade-in" style="background: rgb(255, 255, 255);">
+    <div class="max-w-4xl mx-auto px-6">
+     <h2 data-template-id="exp-heading" class="canva-text heading-font text-center mb-12" style="color: rgb(17, 24, 39); font-weight: 700; font-style: normal; font-size: 24px;">Professional Experience</h2>
+     <div class="relative">
+      <div class="timeline-line hidden md:block"></div>
+      <div class="space-y-10">
+       <div class="md:flex md:items-center">
+        <div class="md:w-1/2 md:text-right md:pr-10">
+         <p data-template-id="exp1-year" class="canva-text font-semibold" style="color: rgb(15, 118, 110); font-weight: 700; font-style: normal; font-size: 16px;">2022–2024</p>
+         <h3 data-template-id="exp1-company" class="canva-text font-medium mt-1" style="color: rgb(17, 24, 39); font-weight: 400; font-style: normal; font-size: 19px;">- elearning Specialist -<br>
+Talent Mind Education</h3>
+        </div>
+        <div class="hidden md:block w-4 h-4 bg-teal-700 rounded-full border-4 border-white shadow relative z-10"></div>
+        <div class="md:w-1/2 md:pl-10"></div>
+       </div>
+       <div class="md:flex md:items-center">
+        <div class="md:w-1/2 md:pr-10"></div>
+        <div class="hidden md:block w-4 h-4 bg-teal-700 rounded-full border-4 border-white shadow relative z-10"></div>
+        <div class="md:w-1/2 md:pl-10">
+         <p data-template-id="exp2-year" class="canva-text font-semibold" style="color: rgb(15, 118, 110); font-weight: 700; font-style: normal; font-size: 16px;">2024–2025</p>
+         <h3 data-template-id="exp2-company" class="canva-text font-medium mt-1" style="color: rgb(17, 24, 39); font-weight: 400; font-style: normal; font-size: 19px;">- elearning Specialist -<br>
+Day va Hoc Education Technology</h3>
+        </div>
+       </div>
+       <div class="md:flex md:items-center">
+        <div class="md:w-1/2 md:text-right md:pr-10">
+         <p data-template-id="exp3-year" class="canva-text font-semibold" style="color: rgb(15, 118, 110); font-weight: 700; font-style: normal; font-size: 16px;">2025–Present</p>
+         <h3 data-template-id="exp3-company" class="canva-text font-medium mt-1" style="color: rgb(17, 24, 39); font-weight: 400; font-style: normal; font-size: 19px;">- Digital Learning Specialist -<br>
+Highlands Coffee</h3>
+        </div>
+        <div class="hidden md:block w-4 h-4 bg-teal-700 rounded-full border-4 border-white shadow relative z-10"></div>
+        <div class="md:w-1/2 md:pl-10"></div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Achievements -->
+   <section class="py-16 md:py-24 fade-in">
+    <div class="max-w-4xl mx-auto px-6">
+     <h2 data-template-id="ach-heading" class="canva-text heading-font text-center mb-10" style="color: rgb(17, 24, 39); font-weight: 700; font-style: normal; font-size: 24px;">Achievements</h2>
+     <div class="grid md:grid-cols-3 gap-6 text-center">
+      <div data-template-id="ach1-card" class="canva-card p-6 rounded-xl" style="background: rgb(240, 253, 250);">
+       <div class="text-3xl mb-3">
+        🏆
+       </div>
+       <p data-template-id="ach1-text" class="canva-text font-medium" style="color: rgb(19, 78, 74); font-weight: 400; font-style: normal; font-size: 16px;">Delivered multiple large-scale eLearning projects</p>
+      </div>
+      <div data-template-id="ach2-card" class="canva-card p-6 rounded-xl" style="background: rgb(240, 253, 250);">
+       <div class="text-3xl mb-3">
+        👥
+       </div>
+       <p data-template-id="ach2-text" class="canva-text font-medium" style="color: rgb(19, 78, 74); font-weight: 400; font-style: normal; font-size: 16px;">Supported thousands of learners through LMS systems</p>
+      </div>
+      <div data-template-id="ach3-card" class="canva-card p-6 rounded-xl" style="background: rgb(240, 253, 250);">
+       <div class="text-3xl mb-3">
+        🤝
+       </div>
+       <p data-template-id="ach3-text" class="canva-text font-medium" style="color: rgb(19, 78, 74); font-weight: 400; font-style: normal; font-size: 16px;">Collaborated with SMEs, stakeholders &amp; cross-functional teams</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Contact -->
+   <section id="contact" data-template-id="contact-section" class="canva-section py-16 md:py-24 fade-in" style="background: rgb(15, 118, 110);">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+     <h2 data-template-id="contact-heading" class="canva-text heading-font mb-6" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Let's Connect</h2>
+     <p data-template-id="contact-subtext" class="canva-text mb-8" style="color: rgb(204, 251, 241); font-weight: 400; font-style: normal; font-size: 16px;">Open to opportunities in Learning Experience Design, Digital Learning, Instructional Design, and LMS-related roles in international organizations.</p>
+     <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="mailto:lekimngan.work@gmail.com" data-template-id="contact-email" class="canva-button inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium transition-transform hover:scale-105" style="background: rgb(255, 255, 255); color: rgb(15, 118, 110); font-weight: 600; font-style: normal; font-size: 16px;">Email Me</a> <a href="https://www.linkedin.com/in/ngan-le-thi-kim-146a87216/" target="_blank" rel="noopener noreferrer" data-template-id="contact-linkedin" class="canva-button inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium border-2 transition-transform hover:scale-105" style="background: transparent; color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">LinkedIn</a>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="py-8 text-center border-t border-gray-200">
+   <p data-template-id="footer-text" class="canva-text text-sm" style="color: rgb(107, 114, 128); font-weight: 400; font-style: normal; font-size: 16px;">© 2026 Ngân Lê — eLearning Specialist &amp; Instructional Designer</p>
+  </footer><!-- Highlands Modal -->
+  <div id="modal-highlands" class="modal-overlay hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60" onclick="if(event.target===this)closeModal('highlands')">
+   <div class="modal-content bg-white rounded-2xl max-w-3xl w-full max-h-[85vh] overflow-y-auto shadow-2xl">
+    <div class="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center rounded-t-2xl z-10">
+     <h2 class="heading-font text-xl font-bold text-gray-900">Highlands Coffee eLearning Programs</h2><button onclick="closeModal('highlands')" class="p-2 hover:bg-gray-100 rounded-full transition"><i data-lucide="x" style="width:20px;height:20px;"></i></button>
+    </div>
+    <div class="p-6 space-y-6">
+     <div class="relative">
+      <div id="highlands-gallery" class="relative overflow-hidden rounded-xl h-56 md:h-72 bg-gray-100">
+       <img data-template-id="highlands-g1" class="canva-image absolute inset-0 w-full h-full object-cover" loading="lazy" src="Highlands Coffee 1.PNG" alt="Highlands Coffee eLearning course introduction with multiple choice questions"> <img data-template-id="highlands-g2" class="canva-image absolute inset-0 w-full h-full object-cover hidden" loading="lazy" src="Highlands Coffee 2.PNG" alt="Global coffee supply chain map showing coffee production countries"> <img data-template-id="highlands-g3" class="canva-image absolute inset-0 w-full h-full object-cover hidden" loading="lazy" src="Highlands Coffee 3.PNG" alt="Vietnam coffee regions and production areas interactive module"> <img data-template-id="highlands-g4" class="canva-image absolute inset-0 w-full h-full object-cover hidden" loading="lazy" src="Highlands Coffee 4.PNG" alt="Module learning flow design with interactive activities and learning objectives"> <img data-template-id="highlands-g5" class="canva-image absolute inset-0 w-full h-full object-cover hidden" loading="lazy" src="Highlands Coffee 5.PNG" alt="Highlands Coffee matcha scenario training slide with customer service question">
+      </div><button onclick="galleryNav('highlands',-1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow hover:bg-white"><i data-lucide="chevron-left" style="width:18px;height:18px;"></i></button> <button onclick="galleryNav('highlands',1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow hover:bg-white"><i data-lucide="chevron-right" style="width:18px;height:18px;"></i></button>
+     </div>
+     <div>
+      <p class="text-sm text-teal-700 font-semibold mb-1">Role</p>
+      <p class="text-gray-700">eLearning Specialist</p>
+     </div>
+     <div>
+      <p class="text-sm text-teal-700 font-semibold mb-2">Project Overview</p>
+      <p class="text-gray-700 text-sm leading-relaxed">Developed and continuously improved digital learning programs to support employee onboarding and capability development across Highlands Coffee. Contributed to the organization's transition toward more scalable and engaging digital learning experiences.</p>
+     </div>
+     <div>
+      <p class="text-sm text-teal-700 font-semibold mb-2">The Challenge</p>
+      <p class="text-gray-700 text-sm mb-3">When eLearning initiatives were first introduced, many learners were unfamiliar with self-paced digital learning. Key challenges included:</p>
+      <ul class="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+       <li>Learners had limited experience navigating eLearning courses</li>
+       <li>Overly complex interactions could create confusion and reduce completion rates</li>
+       <li>Learning paths needed to be delivered within tight monthly timelines</li>
+       <li>The learning team had to balance speed, usability, engagement, and instructional effectiveness</li>
+       <li>As the number of learning programs increased, development efficiency became increasingly important</li>
+      </ul>
+     </div>
+     <div>
+      <p class="text-sm text-teal-700 font-semibold mb-2">My Solution</p>
+      <p class="text-gray-700 text-sm mb-3">I adopted a phased approach that gradually increased learning sophistication while ensuring learners remained comfortable with the platform and learning format.</p>
+      <p class="text-sm font-medium text-gray-800 mb-2">Phase 1: Establish Learner Familiarity</p>
+      <ul class="list-disc pl-5 space-y-1 text-gray-700 text-sm mb-3">
+       <li>Designed simple and intuitive courses focused on ease of use</li>
+       <li>Included clear navigation guidance and learning instructions</li>
+       <li>Prioritized accessibility and user-friendly interactions</li>
+       <li>Gathered feedback on learner behavior and engagement</li>
+      </ul>
+      <p class="text-sm font-medium text-gray-800 mb-2">Phase 2: Enhance Learning Engagement</p>
+      <ul class="list-disc pl-5 space-y-1 text-gray-700 text-sm mb-3">
+       <li>Introduced a wider variety of interactions and learning activities</li>
+       <li>Incorporated scenario-based questions, knowledge checks, and interactive elements</li>
+       <li>Improved visual storytelling and learner participation</li>
+       <li>Increased engagement while maintaining usability</li>
+      </ul>
+      <p class="text-sm font-medium text-gray-800 mb-2">Phase 3: Improve Development Efficiency</p>
+      <ul class="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+       <li>Leveraged AI tools to accelerate content drafting, ideation, and production workflows</li>
+       <li>Developed reusable templates and standardized development processes</li>
+       <li>Reduced production effort for recurring learning components</li>
+       <li>Maintained instructional quality while meeting aggressive development timelines</li>
+      </ul>
+     </div>
+     <div>
+      <p class="text-sm text-teal-700 font-semibold mb-2">Impact</p>
+      <ul class="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+       <li>Helped learners successfully adapt to eLearning as a learning channel</li>
+       <li>Increased the sophistication and engagement level of learning experiences over time</li>
+       <li>Supported the delivery of approximately one learning path per month</li>
+       <li>Improved development efficiency through AI-assisted workflows and reusable assets</li>
+       <li>Balanced learner experience, instructional quality, and business deadlines</li>
+      </ul>
+     </div>
+     <div>
+      <p class="text-sm text-teal-700 font-semibold mb-2">Tools Used</p>
+      <p class="text-gray-700 text-sm">Articulate Storyline 360, ChatGPT, Gemini, Capcut, Vyond, Instructional Design, Learning Experience Design</p>
+     </div>
+    </div>
+   </div>
+  </div><!-- AgriS Modal -->
+  <div id="modal-agris" class="modal-overlay hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60" onclick="if(event.target===this)closeModal('agris')">
+   <div class="modal-content bg-white rounded-2xl max-w-3xl w-full max-h-[85vh] overflow-y-auto shadow-2xl">
+    <div class="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center rounded-t-2xl z-10">
+     <h2 class="heading-font text-xl font-bold text-gray-900">TTC AgriS Sugarcane Harvester elearning Course</h2><button onclick="closeModal('agris')" class="p-2 hover:bg-gray-100 rounded-full transition"><i data-lucide="x" style="width:20px;height:20px;"></i></button>
+    </div>
+    <div class="p-6 space-y-6">
+     <div class="relative">
+      <div id="agris-gallery" class="relative overflow-hidden rounded-xl h-56 md:h-72 bg-gray-100">
+       <img data-template-id="agris-g1" class="canva-image absolute inset-0 w-full h-full object-cover" loading="lazy" src="TTC1.png" alt="TTC AgriS John Deere CH570 harvester training introduction course with VĂN HÀNH VÀ BẢO DƯỠNG title"> <img data-template-id="agris-g2" class="canva-image absolute inset-0 w-full h-full object-cover hidden" loading="lazy" src="TTC2.png" alt="TTC AgriS equipment safety features diagram showing harvester components and technical specifications"> <img data-template-id="agris-g3" class="canva-image absolute inset-0 w-full h-full object-cover hidden" loading="lazy" src="TTC3.png" alt="TTC AgriS interactive learning module showing equipment operation controls and safety features"> <img data-template-id="agris-g4" class="canva-image absolute inset-0 w-full h-full object-cover hidden" loading="lazy" src="TTC4.png" alt="TTC AgriS harvester equipment with safety inspection annotations in field setting">
+      </div><button onclick="galleryNav('agris',-1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow hover:bg-white"><i data-lucide="chevron-left" style="width:18px;height:18px;"></i></button> <button onclick="galleryNav('agris',1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow hover:bg-white"><i data-lucide="chevron-right" style="width:18px;height:18px;"></i></button>
+     </div>
+     <div>
+      <p class="text-sm text-teal-700 font-semibold mb-1">Role</p>
+      <p class="text-gray-700">Project Lead, Instructional Designer &amp; eLearning Developer</p>
+     </div>
+     <div>
+      <p class="text-sm text-teal-700 font-semibold mb-2">Project Overview</p>
+      <p class="text-gray-700 text-sm leading-relaxed">Led the development of a digital training program for agricultural machinery operation and maintenance by converting highly technical English manuals into engaging eLearning experiences for operational staff.</p>
+     </div>
+     <div>
+      <p class="text-sm text-teal-700 font-semibold mb-2">The Challenge</p>
+      <p class="text-gray-700 text-sm mb-3">The project faced multiple constraints:</p>
+      <ul class="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+       <li>A large volume of technical documentation needed to be converted into learning content</li>
+       <li>The content was highly specialized and required close collaboration with subject matter experts</li>
+       <li>The project timeline was extremely tight, with only three weeks allocated for script development</li>
+       <li>Video production resources were limited</li>
+       <li>Filming plans changed frequently due to field conditions and operational constraints</li>
+       <li>Subject matter experts were not always available for recording sessions</li>
+      </ul>
+     </div>
+     <div>
+      <p class="text-sm text-teal-700 font-semibold mb-2">My Solution</p>
+      <p class="text-gray-700 text-sm mb-3">As the primary project executor, I managed the entire production workflow from content analysis to final course delivery. I:</p>
+      <ul class="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+       <li>Translated and analyzed technical source materials</li>
+       <li>Converted complex manuals into learner-friendly instructional content</li>
+       <li>Wrote eLearning scripts and learning scenarios</li>
+       <li>Developed detailed storyboards</li>
+       <li>Created shooting plans and managed production schedules</li>
+       <li>Coordinated on-site recording activities in Tây Ninh</li>
+       <li>Adjusted filming plans in real time when circumstances changed</li>
+       <li>Reorganized production workflows overnight to keep the project on schedule</li>
+       <li>Managed all source files and production assets</li>
+       <li>Prepared expert interview questions and documented technical clarifications</li>
+       <li>Edited videos and integrated multimedia assets into the final eLearning course</li>
+       <li>When expert voice recording became unavailable, proposed and implemented an approved AI voice solution to maintain the project timeline</li>
+      </ul>
+     </div>
+     <div>
+      <p class="text-sm text-teal-700 font-semibold mb-2">Impact</p>
+      <ul class="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+       <li>Successfully delivered the project within the required deadline</li>
+       <li>Converted highly technical engineering content into accessible digital learning experiences</li>
+       <li>Maintained project quality despite changing requirements and resource limitations</li>
+       <li>Demonstrated leadership in coordinating content development, multimedia production, stakeholder communication, and course development simultaneously</li>
+       <li>Produced a complete end-to-end training solution, from source materials to final learning delivery</li>
+      </ul>
+     </div>
+     <div>
+      <p class="text-sm text-teal-700 font-semibold mb-2">Tools Used</p>
+      <p class="text-gray-700 text-sm">Articulate Storyline 360, Camtasia, Video Production, Storyboarding, Instructional Design, Project Coordination</p>
+     </div>
+    </div>
+   </div>
+  </div><!-- UNICEF Modal -->
+  <div id="modal-unicef" class="modal-overlay hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60" onclick="if(event.target===this)closeModal('unicef')">
+   <div class="modal-content bg-white rounded-2xl max-w-3xl w-full max-h-[85vh] overflow-y-auto shadow-2xl">
+    <div class="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center rounded-t-2xl z-10">
+     <h2 class="heading-font text-xl font-bold text-gray-900">UNICEF Parenting Project</h2><button onclick="closeModal('unicef')" class="p-2 hover:bg-gray-100 rounded-full transition"><i data-lucide="x" style="width:20px;height:20px;"></i></button>
+    </div>
+    <div class="p-6 space-y-6">
+     <div class="relative">
+      <div id="unicef-gallery" class="relative overflow-hidden rounded-xl h-56 md:h-72 bg-gray-100">
+       <img data-template-id="unicef-g1" class="canva-image absolute inset-0 w-full h-full object-cover" loading="lazy" src="UNICEF1.png" alt="UNICEF scenario-based eLearning course interface showing interactive learning module"> <img data-template-id="unicef-g2" class="canva-image absolute inset-0 w-full h-full object-cover hidden" loading="lazy" src="UNICEF2.png" alt="UNICEF course introduction screen for parenting education showing learning objectives"> <img data-template-id="unicef-g3" class="canva-image absolute inset-0 w-full h-full object-cover hidden" loading="lazy" src="UNICEF3.png" alt="UNICEF interactive children's activity module with educational content"> <img data-template-id="unicef-g4" class="canva-image absolute inset-0 w-full h-full object-cover hidden" loading="lazy" src="UNICEF4.png" alt="UNICEF course showing age-based child development stages with interactive cards"> <img data-template-id="unicef-g5" class="canva-image absolute inset-0 w-full h-full object-cover hidden" loading="lazy" src="UNICEF5.png" alt="UNICEF home safety module with interactive checklist and learning activities">
+      </div><button onclick="galleryNav('unicef',-1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow hover:bg-white"><i data-lucide="chevron-left" style="width:18px;height:18px;"></i></button> <button onclick="galleryNav('unicef',1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow hover:bg-white"><i data-lucide="chevron-right" style="width:18px;height:18px;"></i></button>
+     </div>
+     <div>
+      <p class="text-sm text-teal-700 font-semibold mb-1">Role</p>
+      <p class="text-gray-700">eLearning Developer &amp; Learning Design Support</p>
+     </div>
+     <div>
+      <p class="text-sm text-teal-700 font-semibold mb-2">Project Overview</p>
+      <p class="text-gray-700 text-sm leading-relaxed">Supported the development of a large-scale parenting eLearning program involving multiple subject matter experts, content contributors, and developers. The project required strong coordination and standardized development practices to ensure consistency across learning modules.</p>
+     </div>
+     <div>
+      <p class="text-sm text-teal-700 font-semibold mb-2">The Challenge</p>
+      <p class="text-gray-700 text-sm mb-3">The project involved numerous stakeholders and contributors, with content being developed by multiple experts and team members. Key challenges included:</p>
+      <ul class="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+       <li>Maintaining consistency across courses created by different developers</li>
+       <li>Ensuring design standards were applied uniformly throughout the program</li>
+       <li>Managing extensive client feedback and revision cycles over several months</li>
+       <li>Preventing conflicts between newly requested changes and previously approved requirements</li>
+       <li>Supporting efficient collaboration across a distributed development team</li>
+      </ul>
+     </div>
+     <div>
+      <p class="text-sm text-teal-700 font-semibold mb-2">My Solution</p>
+      <p class="text-gray-700 text-sm mb-3">To improve consistency and streamline development, I focused on creating scalable development standards and quality control processes. I:</p>
+      <ul class="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+       <li>Developed storyboard support for selected learning modules</li>
+       <li>Designed reusable course templates that could be easily adopted by other developers</li>
+       <li>Established visual and interaction standards to maintain a consistent learner experience</li>
+       <li>Created detailed development checklists to support quality assurance and reduce errors</li>
+       <li>Managed and tracked client feedback throughout multiple review cycles</li>
+       <li>Verified that requested revisions were implemented accurately while maintaining alignment with previous approvals</li>
+       <li>Supported the team in applying standardized development practices across the project</li>
+      </ul>
+     </div>
+     <div>
+      <p class="text-sm text-teal-700 font-semibold mb-2">Impact</p>
+      <ul class="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+       <li>Improved consistency across courses developed by multiple team members</li>
+       <li>Reduced development errors through structured quality control processes</li>
+       <li>Simplified onboarding and collaboration for developers working on the project</li>
+       <li>Helped manage a lengthy review process while maintaining project quality and alignment with client expectations</li>
+       <li>Contributed to the successful delivery of a large-scale UNICEF learning initiative</li>
+      </ul>
+     </div>
+     <div>
+      <p class="text-sm text-teal-700 font-semibold mb-2">Tools Used</p>
+      <p class="text-gray-700 text-sm">Articulate Storyline 360, Storyboarding, Template Design, Quality Assurance, eLearning Development, Stakeholder Coordination</p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script src="/_sdk/editing_sdk.js"></script>
+  <script>
+    lucide.createIcons();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    function openModal(id) {
+      const modal = document.getElementById('modal-' + id);
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      lucide.createIcons();
+    }
+    function closeModal(id) {
+      document.getElementById('modal-' + id).classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    const galleryState = { highlands: 0, agris: 0, unicef: 0 };
+    function galleryNav(id, dir) {
+      const container = document.getElementById(id + '-gallery');
+      const imgs = container.querySelectorAll('img');
+      imgs[galleryState[id]].classList.add('hidden');
+      galleryState[id] = (galleryState[id] + dir + imgs.length) % imgs.length;
+      imgs[galleryState[id]].classList.remove('hidden');
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0654b929b0def6e',t:'MTc4MDU1ODg4Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body></html>
